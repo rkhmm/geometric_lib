@@ -47,6 +47,10 @@ class RectangleTestCase(unittest.TestCase):
         with self.assertRaises(ValueError):
             rectangle_perimeter(-4, 9)
 
+    def test_negative_values1(self):
+        with self.assertRaises(ValueError):
+            rectangle_perimeter(-4, 10)
+
 
 class SquareTestCase(unittest.TestCase):
 
