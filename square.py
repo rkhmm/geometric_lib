@@ -8,6 +8,8 @@ def area(a):
         Пример вызова:
           square area(8)
     '''
+    if a < 0:
+        raise ValueError("Сторона не может быть отрицательной")
     return a * a
 
 
@@ -20,4 +22,6 @@ def perimeter(a):
         Пример вызова:
           square perimeter(8)
     '''
+    if a < 0:
+        raise ValueError("Сторона не может быть отрицательной")
     return 4 * a

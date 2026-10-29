@@ -8,6 +8,8 @@ def area(a, h):
         Пример вызова:
           triangle area(5, 2)
     '''
+    if a < 0 or h < 0:
+        raise ValueError("Основание и высота не могут быть отрицательными")
     return a * h / 2
 
 def perimeter(a, b, c):
@@ -21,4 +23,6 @@ def perimeter(a, b, c):
         Пример вызова:
           triangle perimeter(3, 3, 5)
     '''
+    if a < 0 or b < 0 or c < 0:
+        raise ValueError("Стороны не могут быть отрицательными")
     return a + b + c

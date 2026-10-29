@@ -26,6 +26,10 @@ class CircleTestCase(unittest.TestCase):
         self.assertEqual(circle_area(0), 0)
         self.assertEqual(circle_perimeter(0), 0)
 
+    def test_negative_values(self):
+        with self.assertRaises(ValueError):
+            circle_perimeter(-4)
+
 
 class RectangleTestCase(unittest.TestCase):
 
@@ -38,6 +42,10 @@ class RectangleTestCase(unittest.TestCase):
     def test_zero_side(self):
         self.assertEqual(rectangle_area(10, 0), 0)
         self.assertEqual(rectangle_perimeter(10, 0), 20)
+
+    def test_negative_values(self):
+        with self.assertRaises(ValueError):
+            rectangle_perimeter(-4, 9)
 
 
 class SquareTestCase(unittest.TestCase):
@@ -52,6 +60,9 @@ class SquareTestCase(unittest.TestCase):
         self.assertEqual(square_area(0), 0)
         self.assertEqual(square_perimeter(0), 0)
 
+    def test_negative_values(self):
+        with self.assertRaises(ValueError):
+            square_perimeter(-8)
 
 class TriangleTestCase(unittest.TestCase):
 
@@ -67,6 +78,9 @@ class TriangleTestCase(unittest.TestCase):
     def test_zero_sides(self):
         self.assertEqual(triangle_perimeter(0, 0, 0), 0)
 
+    def test_negative_values(self):
+        with self.assertRaises(ValueError):
+            triangle_perimeter(-3, 3, 5)
 
 if __name__ == "__main__":
     unittest.main()

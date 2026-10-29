@@ -8,6 +8,8 @@ def area(a, b):
        Пример вызова:
          rectangle area(4, 9)
     '''
+    if a < 0 or b < 0:
+        raise ValueError("Стороны не могут быть отрицательными")
     return a * b
 
 def perimeter(a, b):
@@ -20,4 +22,6 @@ def perimeter(a, b):
         Пример вызова:
           rectangle perimeter(4, 9)
         '''
+    if a < 0 or b < 0:
+        raise ValueError("Стороны не могут быть отрицательными")
     return 2 * (a + b)
